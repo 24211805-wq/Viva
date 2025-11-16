@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class  viva{
+    public static void main (String[]args){
+        Scanner in = new Scanner(System.in);
+      //查询次数q 初始值a 乘数种子b length n
+        int q = in.nextInt();
+        int[] a = new int [q];
+        int[] b = new int [q];
+        int[] n = new int [q];
+    for (int i =0;i<q;i++){
+       a[i]=in.nextInt();
+       b[i]=in.nextInt();
+       n[i]=in.nextInt();
+    }
+     System.out.println("result:");
+     for(int i =0;i<q;i++){
+         for (int j=0;j<n[i];j++){
+    int out = a[i]+b[i]*(int)Math.pow(2, j);
+     System.out.print(out+"");
+     }
+     System.out.println();
+     }
+    in.close();
+    }
+}
